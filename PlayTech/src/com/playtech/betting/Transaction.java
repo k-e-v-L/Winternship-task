@@ -12,6 +12,7 @@ public class Transaction {
     private String matchResult;
     private double rate;
 
+    // Constructor to initialize a Transaction object
     public Transaction(String operation, UUID matchId, int coins, String side) {
         this.operation = operation;
         this.matchId = matchId;
@@ -19,6 +20,7 @@ public class Transaction {
         this.side = side;
     }
 
+    // Getter methods for accessing Transaction fields
     public String getOperation() {
         return operation;
     }
@@ -43,6 +45,7 @@ public class Transaction {
         return rate;
     }
 
+    // Setter methods for setting additional fields
     public void setMatchResult(String matchResult) {
         this.matchResult = matchResult;
     }
@@ -51,6 +54,7 @@ public class Transaction {
         this.rate = rate;
     }
 
+    // Check if the transaction is legitimate based on its operation
     public boolean isLegitimate() {
         switch (operation) {
             case "BET":
@@ -62,6 +66,7 @@ public class Transaction {
         }
     }
 
+    // String representation of the Transaction object
     @Override
     public String toString() {
         return String.format("%s %s %s %s %s", operation, matchId, coins, side, matchResult);
