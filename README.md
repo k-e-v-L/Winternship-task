@@ -2,6 +2,7 @@
 Playtech Winternship: test assignment 2024
 
 The classes are under src/com/playtech/betting and I also tried writing Junit tests but sadly I should have spent more time on it and I didn't make it.
+Casino end balance is: 0
 
 Introduction
 Your assignment is to write java program that processes betting data.
