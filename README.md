@@ -1,6 +1,8 @@
 # Winternship-task
 Playtech Winternship: test assignment 2024
 
+I also uploaded it to google drive if it should throw any type of errors here in github: https://drive.google.com/drive/u/5/folders/11gBSNMDpYc_mEu5TjHWPm1XyGClfKwSI
+
 The classes are under src/com/playtech/betting and I also tried writing Junit tests but sadly I should have spent more time on it and I didn't make it.
 Casino end balance is: 0
 
