@@ -12,32 +12,39 @@ public class Player {
     private int totalBets;
     private int wonBets;
 
+    // Constructor to initialize a Player object with a unique ID
     public Player(UUID id) {
         this.id = id;
         this.balance = 0;
         this.transactions = new ArrayList<>();
     }
 
+    // Getter method for accessing the player's ID
     public UUID getId() {
         return id;
     }
 
+    // Getter method for accessing the player's balance
     public int getBalance() {
         return balance;
     }
 
+    // Getter method for accessing the player's transaction history
     public List<Transaction> getTransactions() {
         return transactions;
     }
 
+    // Getter method for accessing the total number of bets made by the player
     public int getTotalBets() {
         return totalBets;
     }
 
+    // Getter method for accessing the number of bets won by the player
     public int getWonBets() {
         return wonBets;
     }
 
+    // Method to add a new transaction to the player's history and update balance
     public void addTransaction(Transaction transaction) {
         transactions.add(transaction);
 
@@ -61,10 +68,12 @@ public class Player {
         }
     }
 
+    // Check if all transactions made by the player are legitimate
     public boolean isLegitimate() {
         return transactions.stream().allMatch(Transaction::isLegitimate);
     }
 
+    // Get the first illegal operation made by the player
     public String getFirstIllegalOperation() {
         return transactions.stream()
                 .filter(transaction -> !transaction.isLegitimate())
@@ -73,6 +82,7 @@ public class Player {
                 .orElse("");
     }
 
+    // Calculate and return the win rate of the player
     public double getWinRate() {
         return totalBets > 0 ? (double) wonBets / totalBets : 0;
     }
